@@ -2,6 +2,6 @@
   "files.associations": {
     "*.js": "javascriptreact"
   },
-  "editor.formatOnSave": true,
+  "editor.formatOnSave": false,
   "eslint.enable": true
 }
