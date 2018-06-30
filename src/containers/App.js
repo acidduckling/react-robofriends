@@ -6,6 +6,7 @@ import SearchBox from 'components/SearchBox';
 import './App.css';
 import Scroll from 'components/Scroll';
 import ErrorBoundary from 'components/ErrorBoundary';
+import Header from 'components/Header';
 
 import { setSearchField, requestRobots } from 'actions';
 
@@ -41,7 +42,7 @@ class App extends Component {
 
     return (
       <div className="tc">
-        <h1 className="f1">RobotFriends</h1>
+        <Header />
         <SearchBox searchChange={onSearchChange} />
         <Scroll>
           <ErrorBoundary>
