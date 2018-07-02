@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "./src/",
+    "allowJs": true,
+    "sourceMap": true,
+    "strictNullChecks": true,
+    "paths": {
+      "*": ["*"]
+    },
+    "jsx": "react"
+  },
+  "include": [
+    "./src/"
+  ]
+}
