@@ -8,8 +8,8 @@ import ErrorBoundary from 'components/ErrorBoundary/ErrorBoundary';
 import Header from 'components/Header/Header';
 import { IRobot, MainProps } from 'state';
 
-class MainPage extends React.Component<MainProps, any> {
-  componentDidMount() {
+class MainPage extends React.Component<MainProps> {
+  componentDidMount(): void {
     this.props.onRequestRobots();
   }
 
@@ -19,7 +19,7 @@ class MainPage extends React.Component<MainProps, any> {
     });
   }
 
-  render() {
+  render(): JSX.Element {
     const { onSearchChange, isPending } = this.props;
 
     if (isPending) return <h1 className="tc">Loading</h1>;

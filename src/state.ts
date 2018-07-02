@@ -24,6 +24,6 @@ export type CombinedProps = ISearchState & IRobotsState;
 export type MainProps = CombinedProps & MainPropMethods;
 
 export interface MainPropMethods {
-  onRequestRobots(): Promise<any>;
-  onSearchChange(): Promise<any>;
+  onRequestRobots(): void;
+  onSearchChange(event: React.SyntheticEvent<HTMLInputElement>): void;
 }

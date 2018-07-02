@@ -1,8 +1,8 @@
+import { requestRobots, setSearchField } from 'actions/actions';
+import MainPage from 'components/MainPage/MainPage';
 import * as React from 'react';
 import { connect } from 'react-redux';
-import { setSearchField, requestRobots } from 'actions/actions';
-import MainPage from 'components/MainPage/MainPage';
-import { IState, CombinedProps, MainPropMethods, MainProps } from 'state';
+import { CombinedProps, IState, MainPropMethods, MainProps } from 'state';
 
 const mapStateToProps = (state: IState): CombinedProps => {
   return {
@@ -13,9 +13,9 @@ const mapStateToProps = (state: IState): CombinedProps => {
   };
 };
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = (dispatch): MainPropMethods => {
   return {
-    onSearchChange: (event: Event): void => {
+    onSearchChange: event => {
       dispatch(setSearchField((event.target as HTMLInputElement).value));
     },
     onRequestRobots: () => dispatch(requestRobots())
@@ -23,7 +23,7 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 class App extends React.Component<MainProps> {
-  render() {
+  render(): JSX.Element {
     return <MainPage {...this.props} />;
   }
 }
