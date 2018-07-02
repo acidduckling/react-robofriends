@@ -4,12 +4,14 @@ import {
   REQUEST_ROBOTS_SUCCESS,
   REQUEST_ROBOTS_FAILED
 } from './constants';
+import { IAction } from 'actions';
+import { IRobotsState, IRobot, ISearchState } from 'state';
 
-const initialStateSearch = {
+const initialStateSearch: ISearchState = {
   searchField: ''
 };
 
-export const searchRobots = (state = initialStateSearch, action = {}) => {
+export const searchRobots = (state: ISearchState = initialStateSearch, action = {} as IAction): ISearchState => {
   switch (action.type) {
     case CHANGE_SEARCH_FIELD:
       return Object.assign({}, state, { searchField: action.payload });
@@ -19,12 +21,12 @@ export const searchRobots = (state = initialStateSearch, action = {}) => {
   }
 };
 
-const initialStateRobots = {
+const initialStateRobots: IRobotsState = {
   isPending: false,
   robots: []
 };
 
-export const requestRobots = (state = initialStateRobots, action = {}) => {
+export const requestRobots = (state = initialStateRobots, action = {} as IAction): IRobotsState => {
   switch (action.type) {
     case REQUEST_ROBOTS_PENDING:
       return Object.assign({}, state, { isPending: true });
