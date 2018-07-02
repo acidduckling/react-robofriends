@@ -3,8 +3,8 @@ import {
   REQUEST_ROBOTS_PENDING,
   REQUEST_ROBOTS_SUCCESS,
   REQUEST_ROBOTS_FAILED
-} from './constants';
-import { IAction } from 'actions';
+} from '../constants';
+import { IAction } from '../actions/actions';
 import { IRobotsState, IRobot, ISearchState } from 'state';
 
 const initialStateSearch: ISearchState = {

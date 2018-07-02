@@ -3,8 +3,8 @@ import {
   REQUEST_ROBOTS_PENDING,
   REQUEST_ROBOTS_SUCCESS,
   REQUEST_ROBOTS_FAILED
-} from './constants';
-import { apiCall } from './api/api';
+} from '../constants';
+import { apiCall } from '../api/api';
 import { IRobot } from 'state';
 
 export interface IAction {

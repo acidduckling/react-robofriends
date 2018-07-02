@@ -1,5 +1,5 @@
 import * as actions from './actions';
-import { CHANGE_SEARCH_FIELD, REQUEST_ROBOTS_PENDING } from './constants';
+import { CHANGE_SEARCH_FIELD, REQUEST_ROBOTS_PENDING } from '../constants';
 import configureMockStore from 'redux-mock-store';
 import thunkMiddleware from 'redux-thunk';
 

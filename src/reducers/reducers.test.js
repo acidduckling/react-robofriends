@@ -3,8 +3,7 @@ import {
   REQUEST_ROBOTS_PENDING,
   REQUEST_ROBOTS_SUCCESS,
   REQUEST_ROBOTS_FAILED
-} from './constants';
-import * as actions from './actions';
+} from '../constants';
 import * as reducers from './reducers';
 
 describe('search robots', () => {

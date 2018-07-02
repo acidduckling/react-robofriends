@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { searchRobots, requestRobots } from 'reducers';
+import { searchRobots, requestRobots } from 'reducers/reducers';
 import { createStore, applyMiddleware, combineReducers } from 'redux';
 import 'tachyons';
 import App from './containers/App';
